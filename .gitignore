@@ -57,6 +57,9 @@ Thumbs.db
 # Tutorial files (keep in docs/)
 TUTORIAL.md.backup
 
+# Internal design documents
+docs/SYSTEM_DESIGN.md
+
 # User config (keep example configs)
 # Uncomment if you don't want to track your personal config
 # config/services.yaml
