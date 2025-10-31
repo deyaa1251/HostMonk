@@ -1,5 +1,6 @@
 # HostMonk
 
+<div align="center">
 ```
 ██╗  ██╗ ██████╗ ███████╗████████╗███╗   ███╗ ██████╗ ███╗   ██╗██╗  ██╗
 ██║  ██║██╔═══██╗██╔════╝╚══██╔══╝████╗ ████║██╔═══██╗████╗  ██║██║ ██╔╝
@@ -9,12 +10,16 @@
 ╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝
                     [ WATCHING YOUR SELF-HOSTED EMPIRE ]
 ```
+
 ![Sample](./public/icons/screenshot-2025-10-31_21-18-25.png)
+
 A **vintage terminal-aesthetic dashboard** for self-hosted applications. Clean YAML configuration meets retro CRT computing vibes.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Built with Next.js](https://img.shields.io/badge/Built%20with-Next.js%2014-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+
+</div>
 
 ---
 
