@@ -1,6 +1,6 @@
 <div align="center">
 
-![HostMonk Logo](./path/to/ascii-logo.png)
+![HostMonk Logo](./public/icons/)
 
 ![Sample](./public/icons/screenshot-2025-10-31_21-18-25.png)
 
