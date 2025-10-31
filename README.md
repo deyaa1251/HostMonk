@@ -9,7 +9,7 @@
 ╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝
                     [ WATCHING YOUR SELF-HOSTED EMPIRE ]
 ```
-
+![Sample](./public/icons/screenshot-2025-10-31_21-18-25.png)
 A **vintage terminal-aesthetic dashboard** for self-hosted applications. Clean YAML configuration meets retro CRT computing vibes.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
