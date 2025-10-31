@@ -14,22 +14,22 @@ A **vintage terminal-aesthetic dashboard** for self-hosted applications. Clean Y
 
 ---
 
-## ✨ Features
+## Features
 
-- **🎨 5 Vintage Themes** - Terminal Green, Amber, Cyan, Paper Noir, Vintage Paper
-- **⚡ Zero-Config Icons** - Just write "jellyfin" in your YAML and get the icon
-- **📡 Live Status Monitoring** - Real-time health checks with glowing indicators
-- **🎯 Simple YAML Config** - No database, no complicated setup
-- **📦 50+ App Icons** - Pre-built SVG icons for popular self-hosted apps
-- **🖥️ CRT Effects** - Authentic scanlines, phosphor glow, and terminal aesthetics
-- **🎮 Theme Hot-Swapping** - Change themes without page reload
-- **📱 Fully Responsive** - Mobile, tablet, and desktop support
-- **🐳 Docker Ready** - One-command deployment
-- **⌨️ Keyboard Navigation** - Terminal-style shortcuts (coming soon)
+- **5 Vintage Themes** - Terminal Green, Amber, Cyan, Paper Noir, Vintage Paper
+- **Zero-Config Icons** - Just write "jellyfin" in your YAML and get the icon
+- **Live Status Monitoring** - Real-time health checks with glowing indicators
+- **Simple YAML Config** - No database, no complicated setup
+- **50+ App Icons** - Pre-built SVG icons for popular self-hosted apps
+- **CRT Effects** - Authentic scanlines, phosphor glow, and terminal aesthetics
+- **Theme Hot-Swapping** - Change themes without page reload
+- **Fully Responsive** - Mobile, tablet, and desktop support
+- **Docker Ready** - One-command deployment
+- **Keyboard Navigation** - Terminal-style shortcuts (coming soon)
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Using Docker (Recommended)
 
@@ -67,7 +67,7 @@ Visit `http://localhost:3000` and enjoy your vintage dashboard!
 
 ---
 
-## 📝 Configuration
+##  Configuration
 
 Create a `config/services.yaml` file:
 
@@ -99,7 +99,7 @@ See `config/examples/` for more examples:
 
 ---
 
-## 🎨 Themes
+##  Themes
 
 HostMonk includes 5 carefully crafted vintage themes:
 
@@ -120,7 +120,7 @@ All themes include:
 
 ---
 
-## 🎯 Supported Apps (50+ Icons)
+## Supported Apps (50+ Icons)
 
 ### Media
 Jellyfin • Plex • Emby • Navidrome
@@ -158,7 +158,7 @@ Heimdall • Homer • Homarr
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 HostMonk is built with:
 
@@ -173,7 +173,7 @@ See [TUTORIAL.md](docs/TUTORIAL.md) for a deep dive into the architecture and te
 
 ---
 
-## 🐳 Docker Deployment
+##  Docker Deployment
 
 ### Docker Compose
 
@@ -203,7 +203,7 @@ services:
 
 ---
 
-## 🎯 Roadmap
+##  Roadmap
 
 - [x] Core dashboard functionality
 - [x] YAML configuration
@@ -221,17 +221,17 @@ services:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 We love contributions! HostMonk is built for the self-hosted community.
 
 **Ways to contribute:**
-- 🎨 Add new app icons
-- 🎨 Create new themes
-- 🐛 Report bugs
-- 💡 Suggest features
-- 📝 Improve documentation
-- 🔧 Submit pull requests
+-  Add new app icons
+-  Create new themes
+-  Report bugs
+-  Suggest features
+-  Improve documentation
+-  Submit pull requests
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
