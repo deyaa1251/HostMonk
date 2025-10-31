@@ -1,5 +1,6 @@
-# HostMonk
+<div align="center">
 
+![HostMonk Logo](./path/to/ascii-logo.png)
 
 ![Sample](./public/icons/screenshot-2025-10-31_21-18-25.png)
 
