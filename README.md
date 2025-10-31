@@ -2,7 +2,7 @@
 
 ![HostMonk Logo](./public/icons/screenshot-2025-10-31_21-32-02.png)
 
-![Sample](./public/icons/screenshot-2025-10-31_21-18-25.png)
+![Sample](./public/icons/screenshot-2025-10-31_21-31-51.png)
 
 A **vintage terminal-aesthetic dashboard** for self-hosted applications. Clean YAML configuration meets retro CRT computing vibes.
 
