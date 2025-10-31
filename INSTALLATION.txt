@@ -1,0 +1,173 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║   ██╗  ██╗ ██████╗ ███████╗████████╗███╗   ███╗ ██████╗ ███╗   ██╗██╗  ██╗  ║
+║   ██║  ██║██╔═══██╗██╔════╝╚══██╔══╝████╗ ████║██╔═══██╗████╗  ██║██║ ██╔╝  ║
+║   ███████║██║   ██║███████╗   ██║   ██╔████╔██║██║   ██║██╔██╗ ██║█████╔╝   ║
+║   ██╔══██║██║   ██║╚════██║   ██║   ██║╚██╔╝██║██║   ██║██║╚██╗██║██╔═██╗   ║
+║   ██║  ██║╚██████╔╝███████║   ██║   ██║ ╚═╝ ██║╚██████╔╝██║ ╚████║██║  ██╗  ║
+║   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝  ║
+║                                                                          ║
+║              SELF-HOSTED DASHBOARD • VINTAGE TERMINAL INTERFACE         ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+PROJECT LOCATION: /home/oss-terminator/hostmonk
+
+═══════════════════════════════════════════════════════════════════════════
+  QUICK START
+═══════════════════════════════════════════════════════════════════════════
+
+1. INSTALL NODE.JS (if not already installed):
+   
+   On Arch Linux:
+   $ sudo pacman -S nodejs npm
+   
+   On Ubuntu/Debian:
+   $ sudo apt install nodejs npm
+   
+   On macOS:
+   $ brew install node
+
+2. NAVIGATE TO PROJECT:
+   
+   $ cd /home/oss-terminator/hostmonk
+
+3. INSTALL DEPENDENCIES:
+   
+   $ npm install
+
+4. CONFIGURE YOUR SERVICES:
+   
+   $ cp config/examples/basic.yaml config/services.yaml
+   $ nano config/services.yaml
+   
+   Edit the file to add your self-hosted apps!
+
+5. RUN DEVELOPMENT SERVER:
+   
+   $ npm run dev
+   
+   Visit: http://localhost:3000
+
+6. BUILD FOR PRODUCTION:
+   
+   $ npm run build
+   $ npm start
+
+7. OR USE DOCKER:
+   
+   $ docker-compose up -d
+   
+   Visit: http://localhost:3000
+
+═══════════════════════════════════════════════════════════════════════════
+  WHAT YOU GET
+═══════════════════════════════════════════════════════════════════════════
+
+✅ Complete Next.js 14 + TypeScript application
+✅ 5 vintage terminal themes
+✅ 20+ SVG icons for popular self-hosted apps
+✅ Live service status monitoring
+✅ CRT effects with scanlines and phosphor glow
+✅ Simple YAML configuration (no database!)
+✅ Docker support with multi-stage builds
+✅ Comprehensive documentation
+✅ Production-ready architecture
+✅ MIT Licensed - fully open source
+
+═══════════════════════════════════════════════════════════════════════════
+  DOCUMENTATION
+═══════════════════════════════════════════════════════════════════════════
+
+📖 README.md           - Full feature list and overview
+📖 QUICKSTART.md       - Get started in 5 minutes
+📖 TUTORIAL.md         - Architecture deep-dive
+📖 TECH_STACK.md       - Technical specifications
+📖 CONTRIBUTING.md     - How to contribute
+📖 PROJECT_SUMMARY.md  - Complete project overview
+
+═══════════════════════════════════════════════════════════════════════════
+  PROJECT STRUCTURE
+═══════════════════════════════════════════════════════════════════════════
+
+hostmonk/
+├── app/               # Next.js application
+│   ├── components/    # React components (Logo, ServiceCard, etc.)
+│   └── ...
+├── lib/               # Core logic (config parser, themes, types)
+├── public/icons/      # 20+ SVG icons
+├── config/            # YAML configuration files
+│   ├── services.yaml  # Your main config
+│   └── examples/      # Example configurations
+├── docs/              # Documentation
+├── Dockerfile         # Docker build
+└── docker-compose.yml # Docker deployment
+
+═══════════════════════════════════════════════════════════════════════════
+  FEATURES
+═══════════════════════════════════════════════════════════════════════════
+
+🎨 THEMES:
+   • Terminal Green (classic CRT)
+   • Amber Alert (IBM terminal)
+   • Cyan Matrix (cyberpunk)
+   • Paper Noir (white on black)
+   • Vintage Paper (dark on cream)
+
+📦 ICONS:
+   Media: Jellyfin, Plex
+   *arr: Sonarr, Radarr, Lidarr, Prowlarr
+   Downloads: qBittorrent, Transmission
+   Infra: Portainer, Traefik, Nginx
+   Monitor: Grafana, Uptime Kuma
+   Network: Pi-hole, AdGuard
+   Storage: Nextcloud, Vaultwarden
+   ...and more!
+
+⚙️ CONFIGURATION:
+   Simple YAML format:
+   
+   services:
+     - name: "Jellyfin"
+       icon: "jellyfin"
+       url: "http://localhost:8096"
+       description: "Media Server"
+
+═══════════════════════════════════════════════════════════════════════════
+  NEXT STEPS
+═══════════════════════════════════════════════════════════════════════════
+
+1. Install dependencies and run locally
+2. Customize config/services.yaml with your apps
+3. Create a GitHub repository and push the code
+4. Share with the self-hosted community!
+   • r/selfhosted on Reddit
+   • Hacker News (Show HN)
+   • Twitter/X
+   • Your blog
+
+═══════════════════════════════════════════════════════════════════════════
+  SUPPORT
+═══════════════════════════════════════════════════════════════════════════
+
+📧 GitHub Issues: For bugs and feature requests
+💬 Discussions: For questions and ideas
+📖 Documentation: Read the docs/ folder
+🤝 Contributing: See CONTRIBUTING.md
+
+═══════════════════════════════════════════════════════════════════════════
+  LICENSE
+═══════════════════════════════════════════════════════════════════════════
+
+MIT License - Free to use, modify, and distribute!
+See LICENSE file for details.
+
+═══════════════════════════════════════════════════════════════════════════
+
+Built with ❤️ for the self-hosted community
+
+[ SYSTEM READY ]
+[ MONITORING ACTIVE ]
+[ ENJOY YOUR VINTAGE DASHBOARD ]
+
+═══════════════════════════════════════════════════════════════════════════
