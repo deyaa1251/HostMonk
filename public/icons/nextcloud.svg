@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M 30 50 Q 30 30 50 30 Q 70 30 70 50 Q 70 40 60 40 Q 50 40 50 50 Q 50 60 40 60 Q 30 60 30 50"/>
+  <line x1="20" y1="70" x2="80" y2="70"/>
+  <line x1="30" y1="75" x2="30" y2="80"/>
+  <line x1="50" y1="75" x2="50" y2="80"/>
+  <line x1="70" y1="75" x2="70" y2="80"/>
+</svg>

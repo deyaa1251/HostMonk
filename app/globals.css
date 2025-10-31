@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* Theme variables - will be overridden by theme selector */
+  --color-primary: #00ff00;
+  --color-primary-dim: #00cc00;
+  --color-primary-bright: #39ff14;
+  --color-background: #0a0a0a;
+  --color-background-alt: #1a1a1a;
+  --color-text: #00ff00;
+  --color-border: #00ff00;
+  --color-success: #00ff00;
+  --color-warning: #ffff00;
+  --color-error: #ff0000;
+  --font-family: 'Share Tech Mono', monospace;
+  --scanline-opacity: 0.03;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  line-height: 1.6;
+}
+
+body {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 255, 0, var(--scanline-opacity)) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(0, 255, 0, var(--scanline-opacity)) 3px
+    );
+  animation: scanline 8s linear infinite;
+  min-height: 100vh;
+}
+
+/* CRT Effect */
+.crt::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 9999;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+.crt {
+  position: relative;
+}
+
+/* Vignette effect */
+.crt::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* Animations */
+@keyframes scanline {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100%; }
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow:
+      0 0 5px var(--color-primary),
+      0 0 10px var(--color-primary);
+  }
+  50% {
+    text-shadow:
+      0 0 10px var(--color-primary-bright),
+      0 0 20px var(--color-primary-bright),
+      0 0 30px var(--color-primary-bright);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  41.99% { opacity: 1; }
+  42% { opacity: 0.8; }
+  43% { opacity: 1; }
+  45.99% { opacity: 1; }
+  46% { opacity: 0.7; }
+  46.5% { opacity: 1; }
+}
+
+/* Utility classes */
+.blink {
+  animation: blink 1s step-start infinite;
+}
+
+.glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.flicker {
+  animation: flicker 3s linear infinite;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+  margin-left: 4px;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+a:hover {
+  border-bottom-color: var(--color-primary);
+}
+
+/* Buttons */
+button {
+  font-family: var(--font-family);
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: var(--color-primary);
+  color: var(--color-background);
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-dim);
+  border: 1px solid var(--color-border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Terminal box styling */
+.terminal-box {
+  border: 2px solid var(--color-border);
+  padding: 16px;
+  background: var(--color-background-alt);
+  box-shadow:
+    0 0 10px rgba(0, 255, 0, 0.1),
+    inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Status indicators */
+.status-online {
+  color: var(--color-success);
+  animation: glow 2s ease-in-out infinite;
+}
+
+.status-offline {
+  color: var(--color-error);
+  opacity: 0.5;
+}
+
+.status-loading {
+  color: var(--color-warning);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .terminal-box {
+    padding: 12px;
+  }
+}

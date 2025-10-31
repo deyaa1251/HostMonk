@@ -1,0 +1,158 @@
+# HostMonk - Advanced Configuration Example
+# Complete setup with categories, tags, and all features
+
+version: "1.0"
+theme: "amber"
+title: "My Homelab Dashboard"
+
+settings:
+  showCategories: true
+  compactMode: false
+  refreshInterval: 30000
+  enablePing: true
+
+services:
+  # Media Services
+  - name: "Jellyfin"
+    icon: "jellyfin"
+    url: "https://jellyfin.mydomain.com"
+    description: "Media streaming server"
+    category: "Media"
+    ping: true
+    tags: ["streaming", "movies", "tv"]
+
+  - name: "Plex"
+    icon: "plex"
+    url: "https://plex.mydomain.com"
+    description: "Alternative media server"
+    category: "Media"
+    ping: true
+    tags: ["streaming", "backup"]
+
+  # Media Management (*arr suite)
+  - name: "Sonarr"
+    icon: "sonarr"
+    url: "https://sonarr.mydomain.com"
+    description: "TV show automation"
+    category: "Media Management"
+    ping: true
+    tags: ["automation", "tv"]
+
+  - name: "Radarr"
+    icon: "radarr"
+    url: "https://radarr.mydomain.com"
+    description: "Movie automation"
+    category: "Media Management"
+    ping: true
+    tags: ["automation", "movies"]
+
+  - name: "Prowlarr"
+    icon: "prowlarr"
+    url: "https://prowlarr.mydomain.com"
+    description: "Indexer manager"
+    category: "Media Management"
+    ping: true
+    tags: ["automation", "indexers"]
+
+  - name: "Lidarr"
+    icon: "lidarr"
+    url: "https://lidarr.mydomain.com"
+    description: "Music automation"
+    category: "Media Management"
+    ping: true
+    tags: ["automation", "music"]
+
+  # Download Clients
+  - name: "qBittorrent"
+    icon: "qbittorrent"
+    url: "https://qbit.mydomain.com"
+    description: "Torrent client"
+    category: "Downloads"
+    ping: true
+    tags: ["torrents"]
+
+  - name: "Transmission"
+    icon: "transmission"
+    url: "https://transmission.mydomain.com"
+    description: "Alternative torrent client"
+    category: "Downloads"
+    ping: true
+    tags: ["torrents", "backup"]
+
+  # Infrastructure
+  - name: "Portainer"
+    icon: "portainer"
+    url: "https://portainer.mydomain.com"
+    description: "Docker management UI"
+    category: "Infrastructure"
+    ping: true
+    tags: ["docker", "management"]
+
+  - name: "Traefik"
+    icon: "traefik"
+    url: "https://traefik.mydomain.com"
+    description: "Reverse proxy dashboard"
+    category: "Infrastructure"
+    ping: true
+    tags: ["proxy", "routing"]
+
+  # Monitoring
+  - name: "Grafana"
+    icon: "grafana"
+    url: "https://grafana.mydomain.com"
+    description: "Metrics and monitoring"
+    category: "Monitoring"
+    ping: true
+    tags: ["metrics", "dashboards"]
+
+  - name: "Uptime Kuma"
+    icon: "uptime-kuma"
+    url: "https://uptime.mydomain.com"
+    description: "Service uptime monitoring"
+    category: "Monitoring"
+    ping: true
+    tags: ["uptime", "alerts"]
+
+  # Storage
+  - name: "Nextcloud"
+    icon: "nextcloud"
+    url: "https://cloud.mydomain.com"
+    description: "Personal cloud storage"
+    category: "Storage"
+    ping: true
+    tags: ["files", "sync"]
+
+  # Network
+  - name: "Pi-hole"
+    icon: "pihole"
+    url: "https://pihole.mydomain.com/admin"
+    description: "Network-wide ad blocker"
+    category: "Network"
+    ping: true
+    tags: ["dns", "adblock"]
+
+  - name: "AdGuard Home"
+    icon: "adguard"
+    url: "https://adguard.mydomain.com"
+    description: "DNS ad blocking"
+    category: "Network"
+    ping: true
+    tags: ["dns", "privacy"]
+
+  # Home Automation
+  - name: "Home Assistant"
+    icon: "homeassistant"
+    url: "https://homeassistant.mydomain.com"
+    description: "Smart home automation"
+    category: "Home Automation"
+    ping: true
+    tags: ["iot", "automation"]
+
+  # Security
+  - name: "Vaultwarden"
+    icon: "vaultwarden"
+    url: "https://vault.mydomain.com"
+    description: "Password manager"
+    category: "Security"
+    ping: true
+    tags: ["passwords", "security"]

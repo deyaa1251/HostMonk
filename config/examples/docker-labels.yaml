@@ -1,0 +1,45 @@
+# HostMonk - Docker Auto-Discovery Example
+# This shows how services would be configured when using Docker labels
+# Note: Docker label auto-discovery is a planned feature for v2.0
+
+version: "1.0"
+theme: "cyan"
+title: "Docker Homelab"
+
+settings:
+  showCategories: true
+  compactMode: true
+  refreshInterval: 15000
+  enablePing: true
+  # Future feature:
+  # dockerAutoDiscovery: true
+  # dockerSocket: "/var/run/docker.sock"
+
+# Manually configured services for now
+# In the future, these could be auto-discovered via Docker labels like:
+#   - "hostmonk.enable=true"
+#   - "hostmonk.name=Jellyfin"
+#   - "hostmonk.icon=jellyfin"
+#   - "hostmonk.category=Media"
+
+services:
+  - name: "Jellyfin"
+    icon: "jellyfin"
+    url: "http://jellyfin:8096"
+    description: "Auto-discovered from Docker"
+    category: "Containers"
+    ping: true
+
+  - name: "Sonarr"
+    icon: "sonarr"
+    url: "http://sonarr:8989"
+    description: "Running in Docker"
+    category: "Containers"
+    ping: true
+
+  - name: "Radarr"
+    icon: "radarr"
+    url: "http://radarr:7878"
+    description: "Running in Docker"
+    category: "Containers"
+    ping: true

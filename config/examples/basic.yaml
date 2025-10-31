@@ -1,0 +1,21 @@
+# HostMonk - Basic Configuration Example
+# Simple setup with minimal configuration
+
+version: "1.0"
+theme: "terminal-green"
+
+services:
+  - name: "Jellyfin"
+    icon: "jellyfin"
+    url: "http://192.168.1.10:8096"
+    description: "Watch movies and TV shows"
+
+  - name: "Nextcloud"
+    icon: "nextcloud"
+    url: "http://192.168.1.10:8080"
+    description: "Cloud storage and file sync"
+
+  - name: "Pi-hole"
+    icon: "pihole"
+    url: "http://192.168.1.1/admin"
+    description: "Network ad blocker"

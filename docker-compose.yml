@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  hostmonk:
+    build: .
+    image: hostmonk:latest
+    container_name: hostmonk
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount your config directory
+      - ./config:/app/config:ro
+      # Optional: custom icons
+      - ./public/icons:/app/public/icons:ro
+    environment:
+      - NODE_ENV=production
+      - TZ=America/New_York  # Set your timezone
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+
+# Example with Traefik reverse proxy
+#   hostmonk:
+#     # ... same as above
+#     labels:
+#       - "traefik.enable=true"
+#       - "traefik.http.routers.hostmonk.rule=Host(`dashboard.example.com`)"
+#       - "traefik.http.routers.hostmonk.entrypoints=websecure"
+#       - "traefik.http.routers.hostmonk.tls.certresolver=letsencrypt"
+#       - "traefik.http.services.hostmonk.loadbalancer.server.port=3000"

@@ -1,0 +1,43 @@
+# HostMonk Configuration File
+# This is the main configuration file for your dashboard
+
+version: "1.0"
+theme: "terminal-green"  # Options: terminal-green, amber, cyan, paper-noir, vintage-paper
+title: "HostMonk Dashboard"
+
+settings:
+  showCategories: true
+  compactMode: false
+  refreshInterval: 30000  # milliseconds
+  enablePing: true
+
+services:
+  - name: "Jellyfin"
+    icon: "jellyfin"
+    url: "http://localhost:8096"
+    description: "Media streaming server"
+    category: "Media"
+    ping: true
+    tags:
+      - "streaming"
+      - "movies"
+
+  - name: "Portainer"
+    icon: "portainer"
+    url: "http://localhost:9000"
+    description: "Docker container management"
+    category: "Infrastructure"
+    ping: true
+    tags:
+      - "docker"
+      - "containers"
+
+  - name: "Pi-hole"
+    icon: "pihole"
+    url: "http://pi.hole/admin"
+    description: "Network-wide ad blocking"
+    category: "Network"
+    ping: true
+    tags:
+      - "dns"
+      - "adblock"

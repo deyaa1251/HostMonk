@@ -1,0 +1,76 @@
+.logoContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 1rem;
+}
+
+.logo {
+  font-size: 10px;
+  font-family: monospace;
+  color: var(--color-primary);
+  text-shadow:
+    0 0 10px var(--color-primary),
+    0 0 20px var(--color-primary);
+  animation: glow 3s ease-in-out infinite, flicker 5s linear infinite;
+  margin: 0 auto 1rem auto;
+  display: inline-block;
+}
+
+.eyeContainer {
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.eye {
+  font-size: 8px;
+  font-family: monospace;
+  color: var(--color-primary-bright);
+  text-shadow:
+    0 0 5px var(--color-primary),
+    0 0 10px var(--color-primary);
+  animation: pulse 2s ease-in-out infinite;
+  margin: 0 auto;
+  display: inline-block;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--color-primary-dim);
+  margin-top: 1rem;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 6px;
+  }
+
+  .eye {
+    font-size: 6px;
+  }
+
+  .subtitle {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .logoContainer {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    font-size: 12px;
+  }
+
+  .eye {
+    font-size: 10px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}
