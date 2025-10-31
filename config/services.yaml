@@ -41,3 +41,13 @@ services:
     tags:
       - "dns"
       - "adblock"
+
+  - name: "Reactive Resume"
+    icon: "file"
+    url: "http://localhost:3000"
+    description: "Free and open-source resume builder"
+    category: "Productivity"
+    ping: true
+    tags:
+      - "resume"
+      - "cv"

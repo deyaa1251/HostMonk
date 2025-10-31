@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { ThemeName, DashboardConfig } from '@/lib/types'
 import { getTheme } from '@/lib/themes'
-import { defaultConfig } from '@/lib/config'
+import { defaultConfig, parseYamlConfig } from '@/lib/config'
 import Logo from './components/Logo'
 import ThemeSelector from './components/ThemeSelector'
 import Dashboard from './components/Dashboard'
@@ -28,12 +28,13 @@ export default function Home() {
         const response = await fetch('/config/services.yaml')
         if (response.ok) {
           const yamlContent = await response.text()
-          // In a real app, you'd parse the YAML here
-          // For now, we'll use the default config
-          console.log('Config loaded:', yamlContent)
+          const parsedConfig = parseYamlConfig(yamlContent)
+          setConfig(parsedConfig)
+          setCurrentTheme(parsedConfig.theme)
+          console.log('Config loaded successfully')
         }
       } catch (error) {
-        console.log('Using default config')
+        console.log('Using default config:', error)
       }
     }
     loadConfig()

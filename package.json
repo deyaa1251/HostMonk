@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A vintage terminal-aesthetic dashboard for self-hosted applications",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8765",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
